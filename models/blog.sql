@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS blogs (
+	blog_id SERIAL PRIMARY KEY,
+	title TEXT NOT NULL,
+	content TEXT NOT NULL,
+	category TEXT NOT NULL,
+	published_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	username TEXT NOT NULL,
+	FOREIGN KEY (username) REFERENCES users(username)
+);
